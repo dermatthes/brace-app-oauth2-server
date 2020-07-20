@@ -19,7 +19,7 @@
   },
   "autoload": {
     "psr-4": {
-      "\\Brace\\App\\OAuth2\\Server": "src/"
+      "Brace\\App\\OAuth2\\Server\\": "src/"
     },
     "files": [
       "config.php"
