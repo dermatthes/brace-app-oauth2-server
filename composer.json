@@ -1,0 +1,35 @@
+{
+  "name": "brace/app-oauth2-server",
+  "description": "OAuth2 OpenID Connect Server Bindings",
+  "keywords": ["Keyword1", "Keyword2"],
+  "license": "Proprietary",
+  "authors": [
+    { "name": "Matthias Leuffen", "email": "m@tth.es" },
+    { "name": "Michael Schaar" }
+  ],
+  "repositories": [
+  ],
+  "require": {
+    "php": ">=7.2",
+    "ext-curl": "^7.2",
+    "ext-json": "^1.6",
+    "ext-openssl": "*",
+    "phore/micro-app": "dev-http_responses",
+    "phore/jwt": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Brace\\App\\OAuth2\\Server": "src/"
+    },
+    "files": [
+      "config.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": { "Brace\\Tests\\": "tests/" }
+  },
+  "minimum-stability": "dev",
+  "require-dev": {
+    "phpunit/phpunit": "*"
+  }
+}

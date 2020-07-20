@@ -1,0 +1,34 @@
+version: 1
+from: "infracamp/kickstart-flavor-gaia:testing"
+
+apache_fallback_resource: "/index.php"
+
+config_file:
+  template: "config.php.dist"
+  target: "config.php"
+
+command:
+  build:
+    ##- "sudo apt-get update && sudo apt-get install -y php-libsodium"
+    - "composer update"
+    - "sudo scripts/build.sh"
+
+  dev:
+    - "sudo scripts/startup.sh"
+    - "curl 'http://localhost/.well-known/update'"
+
+  init:
+    - "sudo chmod -R 444 tests/mock_secrets/private-key-rsa4096.pem"
+
+  run:
+    - "sudo scripts/startup.sh"
+    - "curl 'http://localhost/.well-known/update'"
+
+  startup:
+    - "sudo scripts/startup.sh"
+    - "curl 'http://localhost/.well-known/update'"
+
+  test:
+    - "curl 'http://localhost/.well-known/update'"
+    - "vendor/bin/phpunit tests/"
+
