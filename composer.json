@@ -2,7 +2,7 @@
   "name": "brace/app-oauth2-server",
   "description": "OAuth2 OpenID Connect Server Bindings",
   "keywords": ["Keyword1", "Keyword2"],
-  "license": "Proprietary",
+  "license": "MIT",
   "authors": [
     { "name": "Matthias Leuffen", "email": "m@tth.es" },
     { "name": "Michael Schaar" }
